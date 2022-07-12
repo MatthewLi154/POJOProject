@@ -1,6 +1,6 @@
 /***********************************************************************
-Write a function `breakDownObj(obj)` that takes in an object as a parameter 
-and returns an array containing:  all the keys from the object **and** all the 
+Write a function `breakDownObj(obj)` that takes in an object as a parameter
+and returns an array containing:  all the keys from the object **and** all the
 values of the object.
 
 **Hint**: Use spread syntax to spread out elements into an array!
@@ -15,7 +15,19 @@ breakDownObj(object2); // => [ 'location', 'borough', 'NY', 'Brooklyn' ]
 ***********************************************************************/
 
 function breakDownObj(obj) {
-  // Your code here
+  // return an array containing all keys from object and all values of the object
+  let arrKey = []
+  let arrVal = []
+
+  for (key in obj) {
+    arrKey.push(key)
+    arrVal.push(obj[key])
+  }
+
+  console.log(arrKey.concat(arrVal))
+  return arrKey.concat(arrVal)
+
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

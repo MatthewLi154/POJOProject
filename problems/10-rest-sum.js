@@ -10,7 +10,13 @@ restSum(0); // => 0
 ***********************************************************************/
 
 function restSum(...otherNums) {
-  // Your code here
+  // sum all parameters
+  let sum = 0;
+  for (element of otherNums) {
+    sum += element
+  }
+  console.log(sum);
+  return sum;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
