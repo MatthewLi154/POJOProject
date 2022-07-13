@@ -12,7 +12,22 @@ console.log(stringConverter("raccoon")); // => {r: 1, a: 1, c: 2, o: 2, n: 1}
 ***********************************************************************/
 
 function stringConverter(string) {
-  // Your code here
+  // returns an object representing the ocunt of each character in the string
+  let arrString = string.split('')
+  let obj = {};
+  // create obj where each letter is a key
+  arrString.forEach(key => {
+  // check if each letter exists as key in obj, if not, assign key with 1
+  if (obj[key] === undefined) {
+    obj[key] = 1
+  }
+  // if key exists, add 1 to value
+  else {
+    obj[key]++
+  }
+  })
+  return obj;
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

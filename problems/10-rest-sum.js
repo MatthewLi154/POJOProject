@@ -12,10 +12,9 @@ restSum(0); // => 0
 function restSum(...otherNums) {
   // sum all parameters
   let sum = 0;
-  for (element of otherNums) {
-    sum += element
-  }
-  console.log(sum);
+  otherNums.forEach(item => sum += item)
+
+  console.log(sum)
   return sum;
 }
 

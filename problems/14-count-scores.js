@@ -28,7 +28,25 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here
+  // return an object that has key-values listing each person who scored as a key and the sum of the ottal points for hte game
+  // as their value
+
+  // Create an object with names and their scores
+  let obj = {};
+
+  people.forEach(item => {
+    let {name,score} = item;
+    if (obj[name] === undefined) {
+        obj[name] = score;
+    }
+    else {
+      // if name key exists on obj, add score to existing score
+      obj[name] += score;
+    }
+  })
+  console.log(obj)
+  return obj
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
